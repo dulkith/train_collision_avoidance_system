@@ -74,6 +74,7 @@ int MotionSensor::getValue()  {
            Serial.print((millis() - pause)/1000);
            Serial.println(" sec");*/
            //delay(50);
+           //display.printHome();
            }
        }
        return state;

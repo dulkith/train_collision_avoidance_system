@@ -25,6 +25,7 @@ String NODE_ID = "1";
 
 int systemStaus = 0;
 int onlineCheck = 0;
+int reset = 0;
 
 FirebaseDatabase::FirebaseDatabase() {}
 
@@ -81,19 +82,20 @@ void FirebaseDatabase::run() {
   }
 
   if (laserSensors.getValue(1) == 0) {
-    //display.printOnline();
-    buzzer.beep(35);
+    display.rightLaserAnimation();
+    reset = 1;
     if (1 != Firebase.getInt("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_RIGHT")) {
       Firebase.set("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_RIGHT", 1);
       sensorActivateLogWrite("RIGHT");
+      display.rightLaserAnimation();
     }
   }else{
     Firebase.set("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_RIGHT", 0);
   }
 
   if (laserSensors.getValue(2) == 0) {
-    //display.printOnline();
-    buzzer.beep(35);
+    display.leftLaserAnimation();
+    reset = 1;
     if (1 != Firebase.getInt("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_LEFT")) {
       Firebase.set("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_LEFT", 1);
       sensorActivateLogWrite("LEFT");
@@ -103,15 +105,26 @@ void FirebaseDatabase::run() {
   }
 
   if (motionSensor.getValue() == 0) {
-    //display.printOnline();
     Firebase.set("EDGES/NODE_" + NODE_ID + "/MOTION_SENSOR", 0);
   }else{
     if (1 != Firebase.getInt("EDGES/NODE_" + NODE_ID + "/MOTION_SENSOR")) {
       Firebase.set("EDGES/NODE_" + NODE_ID + "/MOTION_SENSOR", 1);
       sensorActivateLogWrite("MOTION");
     }
-    buzzer.beep(50);
+    display.motionAnimation();
+    reset = 1;
   }
+
+  if(motionSensor.getValue() == 1 || laserSensors.getValue(1) == 0 || laserSensors.getValue(2) == 0 ){
+    buzzer.beep(50);
+    display.nodeNumberDisplay("01");
+  }
+
+  if(motionSensor.getValue() == 0 && laserSensors.getValue(1) == 1 && laserSensors.getValue(2) == 1 && reset == 1){
+    display.printHome();
+    reset = 0;
+  }
+  
 
 }
 

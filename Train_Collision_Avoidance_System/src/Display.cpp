@@ -41,57 +41,24 @@ uint8_t B1_DR[8] = {B00000, B00000, B00000, B11000,
 // Loading bar
 uint8_t loadBar[8] = {B00000, B00000, B00000, B00000,
                       B11111, B11111, B11111, B00000};
-// Bulb on/off
-uint8_t BULB_OFF[8] = {0x0E, 0x11, 0x11, 0x11, 0x11, 0x0E, 0x0E, 0x04};
-uint8_t BULB_ON[8] = {0x0E, 0x1F, 0x1F, 0x1F, 0x1B, 0x0E, 0x0E, 0x04};
+// icons
+byte left_laser[] = {0x00, 0x1E, 0x0E, 0x06, 0x02, 0x02, 0x02, 0x02};
 
-// Online
-byte ONLINE[] = {0x01, 0x01, 0x1F, 0x11, 0x11, 0x1F, 0x1F, 0x1F};
+byte right_laser[] = {0x00, 0x0F, 0x0E, 0x0C, 0x08, 0x08, 0x08, 0x08};
 
-//Frame
-byte left_top[] = {
-  0x00,
-  0x00,
-  0x00,
-  0x07,
-  0x04,
-  0x04,
-  0x04,
-  0x04
-};
+byte motion_sensor[] = {0x00, 0x0E, 0x11, 0x0E, 0x04, 0x1F, 0x04, 0x0A};
 
-byte right_top[] = {
-  0x00,
-  0x00,
-  0x00,
-  0x1C,
-  0x04,
-  0x04,
-  0x04,
-  0x04
-};
+byte motion_sensor1[] = {0x0E, 0x11, 0x0E, 0x15, 0x0E, 0x04, 0x0A, 0x00};
 
-byte right_bottom[] = {
-  0x04,
-  0x04,
-  0x04,
-  0x1C,
-  0x00,
-  0x00,
-  0x00,
-  0x00
-};
+// Frame
+byte left_top[] = {0x00, 0x00, 0x00, 0x07, 0x04, 0x04, 0x04, 0x04};
 
-byte left_bottom[] = {
-  0x04,
-  0x04,
-  0x04,
-  0x07,
-  0x00,
-  0x00,
-  0x00,
-  0x00
-};
+byte right_top[] = {0x00, 0x00, 0x00, 0x1C, 0x04, 0x04, 0x04, 0x04};
+
+byte right_bottom[] = {0x04, 0x04, 0x04, 0x1C, 0x00, 0x00, 0x00, 0x00};
+
+byte left_bottom[] = {0x04, 0x04, 0x04, 0x07, 0x00, 0x00, 0x00, 0x00};
+
 
 Display::Display() {}
 
@@ -155,7 +122,9 @@ void Display::print(int row, int line, String message) {
 }
 void Display::printHome() {
   print(-4, 0, " --------------");
-  print(-4, 3, " --------------");
+  print(-4, 3, " --------     -");
+
+  //print(-4, 3, " - NODE01 000 -");
 
   lcd.createChar(9, left_top);
   lcd.setCursor(-4, 0);
@@ -180,6 +149,18 @@ void Display::printHome() {
 
   print(1, 1, "BAMBALAPITIYA");
   print(-3, 2, "RAILWAY STATION");
+
+  lcd.createChar(13, left_laser);
+  lcd.setCursor(6, 3);
+  lcd.write(13);
+
+  lcd.createChar(14, motion_sensor);
+  lcd.setCursor(7, 3);
+  lcd.write(14);
+
+  lcd.createChar(15, right_laser);
+  lcd.setCursor(8, 3);
+  lcd.write(15);
 }
 
 /*
@@ -202,41 +183,31 @@ void Display::printHome() {
     bulbOn(2);
 }*/
 
-void Display::doorLock() {
-  lcd.createChar(9, LOCK_LOGO);
-  lcd.setCursor(-3, 3);
-  lcd.write(9);
-  print(-2, 3, "-LOCK  ");
-};
-void Display::doorUnLock() {
-  lcd.createChar(10, UNLOCK_LOGO);
-  lcd.setCursor(-3, 3);
-  lcd.write(10);
-  print(-2, 3, "-UNLOCK");
-};
-void Display::bulbOn(int bulbNumber) {
-  lcd.createChar(11, BULB_ON);
-  if (bulbNumber == 1)
-    lcd.setCursor(7, 3);
-  else
-    lcd.setCursor(8, 3);
-  lcd.write(11);
-};
-void Display::bulbOff(int bulbNumber) {
-  lcd.createChar(12, BULB_OFF);
-  if (bulbNumber == 1)
-    lcd.setCursor(7, 3);
-  else
-    lcd.setCursor(8, 3);
-  lcd.write(12);
-};
 
-void Display::printOnline() {
-  lcd.createChar(13, ONLINE);
-  lcd.setCursor(11, 3);
+void Display::leftLaserAnimation(){
+  print(6, 3, " ");
+  delay(500);
+  lcd.setCursor(6, 3);
   lcd.write(13);
-  delay(100);
-  print(11, 3, " ");
+}
+
+
+void Display::rightLaserAnimation(){
+  print(8, 3, " ");
+  delay(500);
+  lcd.setCursor(8, 3);
+  lcd.write(15);
+}
+
+void Display::motionAnimation(){
+  print(7, 3, " ");
+  delay(500);
+  lcd.setCursor(7, 3);
+  lcd.write(14);
+}
+
+void Display::nodeNumberDisplay(String nodeId){
+  print(-3, 3, " NODE " + nodeId);
 }
 
 void Display::clear() { lcd.clear(); }
