@@ -16,7 +16,7 @@
 
 void setup() {
   // Debug console
-  Serial.begin(9600);
+  //Serial.begin(9600);
   //
   laserSensors.SETUP();
   actionSwitch.SETUP();
@@ -30,7 +30,4 @@ void setup() {
 
 void loop() {
   firebaseDatabase.run();
-  // actionSwitch.lightsControl();
-  // actionSwitch.doorControl();
-  //modeSwitch.modControl();
 }
