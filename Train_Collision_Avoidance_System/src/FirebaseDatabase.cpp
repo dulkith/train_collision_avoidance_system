@@ -50,7 +50,7 @@ void FirebaseDatabase::SETUP() {
 
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
   display.clear();
-
+  display.printHome();
 }
 
 void FirebaseDatabase::sensorActivateLogWrite(String sensor) {
@@ -82,7 +82,7 @@ void FirebaseDatabase::run() {
 
   if (laserSensors.getValue(1) == 0) {
     //display.printOnline();
-    buzzer.beep(50);
+    buzzer.beep(35);
     if (1 != Firebase.getInt("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_RIGHT")) {
       Firebase.set("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_RIGHT", 1);
       sensorActivateLogWrite("RIGHT");
@@ -93,7 +93,7 @@ void FirebaseDatabase::run() {
 
   if (laserSensors.getValue(2) == 0) {
     //display.printOnline();
-    buzzer.beep(50);
+    buzzer.beep(35);
     if (1 != Firebase.getInt("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_LEFT")) {
       Firebase.set("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_LEFT", 1);
       sensorActivateLogWrite("LEFT");

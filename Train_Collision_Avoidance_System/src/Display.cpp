@@ -48,6 +48,51 @@ uint8_t BULB_ON[8] = {0x0E, 0x1F, 0x1F, 0x1F, 0x1B, 0x0E, 0x0E, 0x04};
 // Online
 byte ONLINE[] = {0x01, 0x01, 0x1F, 0x11, 0x11, 0x1F, 0x1F, 0x1F};
 
+//Frame
+byte left_top[] = {
+  0x00,
+  0x00,
+  0x00,
+  0x07,
+  0x04,
+  0x04,
+  0x04,
+  0x04
+};
+
+byte right_top[] = {
+  0x00,
+  0x00,
+  0x00,
+  0x1C,
+  0x04,
+  0x04,
+  0x04,
+  0x04
+};
+
+byte right_bottom[] = {
+  0x04,
+  0x04,
+  0x04,
+  0x1C,
+  0x00,
+  0x00,
+  0x00,
+  0x00
+};
+
+byte left_bottom[] = {
+  0x04,
+  0x04,
+  0x04,
+  0x07,
+  0x00,
+  0x00,
+  0x00,
+  0x00
+};
+
 Display::Display() {}
 
 void Display::SETUP() {
@@ -108,6 +153,35 @@ void Display::print(int row, int line, String message) {
   lcd.setCursor(row, line);
   lcd.print(message);
 }
+void Display::printHome() {
+  print(-4, 0, " --------------");
+  print(-4, 3, " --------------");
+
+  lcd.createChar(9, left_top);
+  lcd.setCursor(-4, 0);
+  lcd.write(9);
+
+  lcd.createChar(10, right_top);
+  lcd.setCursor(15, 0);
+  lcd.write(10);
+
+  lcd.createChar(11, left_bottom);
+  lcd.setCursor(-4, 3);
+  lcd.write(11);
+
+  lcd.createChar(12, right_bottom);
+  lcd.setCursor(11, 3);
+  lcd.write(12);
+
+  /*print(-4, 1, "|");
+  print(-4, 2, "|");
+  print(15, 1, "|");
+  print(11, 2, "|");*/
+
+  print(1, 1, "BAMBALAPITIYA");
+  print(-3, 2, "RAILWAY STATION");
+}
+
 /*
 void Display::printHome() {
   print(0, 0, "-- HAPPY LOCK --");
