@@ -9,6 +9,7 @@
 #include "FirebaseDatabase.h"
 #include "LaserSensors.h"
 #include "MotionSensor.h"
+#include "Buzzer.h"
 
 String NODE_ID = "1";
 
@@ -81,6 +82,7 @@ void FirebaseDatabase::run() {
 
   if (laserSensors.getValue(1) == 0) {
     //display.printOnline();
+    buzzer.beep(50);
     if (1 != Firebase.getInt("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_RIGHT")) {
       Firebase.set("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_RIGHT", 1);
       sensorActivateLogWrite("RIGHT");
@@ -91,6 +93,7 @@ void FirebaseDatabase::run() {
 
   if (laserSensors.getValue(2) == 0) {
     //display.printOnline();
+    buzzer.beep(50);
     if (1 != Firebase.getInt("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_LEFT")) {
       Firebase.set("EDGES/NODE_" + NODE_ID + "/LASER_SENSOR_LEFT", 1);
       sensorActivateLogWrite("LEFT");
@@ -107,6 +110,7 @@ void FirebaseDatabase::run() {
       Firebase.set("EDGES/NODE_" + NODE_ID + "/MOTION_SENSOR", 1);
       sensorActivateLogWrite("MOTION");
     }
+    buzzer.beep(50);
   }
 
 }
