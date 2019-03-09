@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="false"
+    android:layout_centerInParent="false"
+    android:layout_centerVertical="false"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--<com.google.android.gms.maps.MapView-->
+    <!--android:id="@+id/map"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="411dp"-->
+    <!--android:layout_x="0dp"-->
+    <!--android:layout_y="0dp" />-->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <!--<fragment-->
+        <!--android:id="@+id/map"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--class="com.google.android.gms.maps.MapView" />-->
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_x="0dp"
+            android:layout_y="0dp"
+            android:keepScreenOn="true"/>
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp">-->
+
+        <!--<Button-->
+        <!--android:id="@+id/viewMyLocation"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/my"-->
+        <!--android:textColor="#FFFFFF" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/viewLockLocation"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/map_lock"-->
+        <!--android:textColor="#FFFFFF" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/setDirection"-->
+        <!--android:layout_width="106dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/direction"-->
+        <!--android:textColor="#FFFFFF" />-->
+
+        <!--</LinearLayout>-->
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/viewMyLocation"
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:layout_x="10dp"
+        android:layout_y="178dp"
+        android:alpha="0.70"
+        android:background="#292929"
+        android:drawableLeft="@drawable/ic_my_location"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="430dp" />
+
+    <Button
+        android:id="@+id/viewLockLocation"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="67dp"
+        android:layout_x="9dp"
+        android:layout_y="220dp"
+        android:alpha="0.80"
+        android:background="#FFFFFF"
+        android:drawableLeft="@drawable/ic_node"
+        android:drawablePadding="2dip"
+        android:gravity="center"
+        android:paddingLeft="3dip"
+        android:paddingRight="8dip"
+        android:singleLine="true"
+        android:text="@string/map_lock_locate"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="463dp" />
+
+    <TextView
+        android:id="@+id/distance2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="14dp"
+        android:layout_y="7dp"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="2"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:text="DISTANCE TO NEXT NODE : "
+        android:textColor="@color/bg_register"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+    <TextView
+        android:id="@+id/distanceView"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_x="198dp"
+        android:layout_y="7dp"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="2"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:text="-------"
+        android:textColor="@color/colorRouteLine"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+    <Button
+        android:id="@+id/setDirection"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@+id/viewLockLocation"
+        android:layout_alignBottom="@+id/viewLockLocation"
+        android:layout_toEndOf="@+id/viewLockLocation"
+        android:layout_x="10dp"
+        android:layout_y="261dp"
+        android:alpha="0.80"
+        android:background="#4A80F5"
+        android:drawableLeft="@drawable/ic_start_navigation"
+        android:drawablePadding="2dip"
+        android:gravity="center"
+        android:paddingLeft="3dip"
+        android:paddingRight="8dip"
+        android:singleLine="true"
+        android:text="@string/direction"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="457dp" />
+
+    <!--<Spinner-->
+        <!--android:id="@+id/spinner"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginBottom="62dp"-->
+        <!--android:layout_marginStart="118dp"-->
+        <!--android:layout_x="153dp"-->
+        <!--android:layout_y="427dp"-->
+        <!--android:background="@null"-->
+        <!--android:entries="@array/spinnerItems" />-->
+
+</AbsoluteLayout>

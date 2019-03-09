@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="false"
+    android:layout_centerInParent="false"
+    android:layout_centerVertical="false"
+    android:background="#1E1E1E"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="lk.edu.nchs.traincollisionavoidancesystem.HomeActivity">
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="671dp"
+        android:layout_height="417dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:src="@drawable/home_wallpaper"
+        tools:layout_editor_absoluteX="304dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageButton
+        android:id="@+id/btnSpeak"
+        android:layout_width="287dp"
+        android:layout_height="98dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_x="9dp"
+        android:layout_y="100dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/location_button"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="41dp" />
+
+    <ImageButton
+        android:id="@+id/btnSpeak3"
+        android:layout_width="290dp"
+        android:layout_height="93dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_x="10dp"
+        android:layout_y="196dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/alert_button"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="41dp" />
+
+    <ImageButton
+        android:id="@+id/btnSpeak2"
+        android:layout_width="283dp"
+        android:layout_height="97dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_x="9dp"
+        android:layout_y="5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/camera_button"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="41dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="264dp"
+        android:layout_height="63dp"
+        android:layout_x="367dp"
+        android:layout_y="16dp"
+        android:src="@drawable/logo_welcome"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_x="476dp"
+        android:layout_y="75dp"
+        android:text="Version 1.0"
+        android:textAlignment="textEnd"
+        android:textColor="#d1d1d1"
+        android:textSize="10sp"
+        tools:layout_editor_absoluteX="436dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+</AbsoluteLayout>

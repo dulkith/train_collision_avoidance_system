@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="20dp"
+        android:layout_x="0dp"
+        android:layout_y="74dp"
+        android:background="#C6C6C6" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_x="434dp"
+        android:layout_y="47dp"
+        android:text="TIME AGO"
+        android:textColor="#666666"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+        android:layout_x="218dp"
+        android:layout_y="47dp"
+        android:text="DATE / TIME"
+        android:textColor="#666666"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_x="352dp"
+        android:layout_y="9dp"
+        android:text="SENSOR NOTIFICATIONS LOG"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="422dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView20"
+        android:layout_marginTop="19dp"
+        android:layout_y="76dp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="20dp"
+        android:layout_y="47dp"
+        android:text="STATUS"
+        android:textColor="#666666"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+</AbsoluteLayout>

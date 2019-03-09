@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mode1"
+        android:title="Manual Door Lock / Unlock" />
+    <item
+        android:id="@+id/mode2"
+        android:title="Manual Lights On / Off"/>
+    <item
+        android:id="@+id/mode3"
+        android:title="Fully Auto Control"/>
+    <item
+        android:id="@+id/mode4"
+        android:title="Auto Door / Manual Lights" />
+    <item
+        android:id="@+id/mode5"
+        android:title="Manual Door / Auto Lights" />
+</menu>

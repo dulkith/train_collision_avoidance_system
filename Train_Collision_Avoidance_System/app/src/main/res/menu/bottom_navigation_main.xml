@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home_bottom_menu"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_door_lock"
+        android:enabled="true"
+        android:icon="@drawable/ic_train"
+        android:title="@string/door_lock_bottom_menu"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_light"
+        android:enabled="true"
+        android:icon="@drawable/ic_camera"
+        android:title="@string/bulbs_bottom_menu"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_location"
+        android:enabled="true"
+        android:icon="@drawable/ic_location"
+        android:title="@string/location_bottom_menu"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_door_history"
+        android:enabled="true"
+        android:icon="@drawable/ic_alert"
+        android:title="@string/camera_bottom_menu"
+        app:showAsAction="ifRoom"/>
+
+
+</menu>

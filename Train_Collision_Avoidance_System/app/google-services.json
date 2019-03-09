@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "118074856082",
+    "firebase_url": "https://traincollisionavoidancesystem.firebaseio.com",
+    "project_id": "traincollisionavoidancesystem",
+    "storage_bucket": "traincollisionavoidancesystem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118074856082:android:c7cb306a90b67dc8",
+        "android_client_info": {
+          "package_name": "lk.edu.nchs.traincollisionavoidancesystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118074856082-2cbu8aoooa77k1l690ra4ibmjb6eobi1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "lk.edu.nchs.traincollisionavoidancesystem",
+            "certificate_hash": "009e74792d45538f00da596f2b01b5326b476879"
+          }
+        },
+        {
+          "client_id": "118074856082-qr6ve4bktu2876blsq9k05kaj4knnm05.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxDcMXMgGCWWY2N3ctEI6fnTwJfWvDrfU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118074856082-qr6ve4bktu2876blsq9k05kaj4knnm05.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

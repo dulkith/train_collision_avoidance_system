@@ -1,0 +1,114 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lk.edu.nchs.traincollisionavoidancesystem.DoorControlFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/changeMode"
+        android:layout_width="300dp"
+        android:layout_height="71dp"
+        android:layout_below="@+id/displayText"
+        android:layout_centerHorizontal="true"
+        android:layout_x="32dp"
+        android:layout_y="405dp"
+        android:background="@drawable/default_button_shape"
+        android:text="@string/change_mode"
+        android:textAllCaps="false"
+        android:textColor="#CFFFEE"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lockButton"
+        android:layout_centerHorizontal="true"
+        android:layout_x="68dp"
+        android:layout_y="23dp"
+        android:text="@string/home_door_control"
+        android:textColor="#4C4C4C"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+    <com.skyfishjy.library.RippleBackground
+        android:id="@+id/content_unlocked"
+        android:layout_width="match_parent"
+        android:layout_height="409dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        app:rb_color="#6f00cc13"
+        app:rb_duration="6000"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="6"
+        app:rb_scale="8">
+
+        <ImageView
+            android:id="@+id/centerImageUnlocked"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/unlock_button" />
+
+    </com.skyfishjy.library.RippleBackground>
+
+
+    <com.skyfishjy.library.RippleBackground
+        android:id="@+id/content_locked"
+        android:layout_width="match_parent"
+        android:layout_height="409dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        app:rb_color="#6fcc0007"
+        app:rb_duration="4000"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="6"
+        app:rb_scale="8">
+
+        <ImageView
+            android:id="@+id/centerImageLocked"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/lock_button" />
+
+    </com.skyfishjy.library.RippleBackground>
+
+
+    <TextView
+        android:id="@+id/displayText"
+        android:layout_width="344dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/centerImage"
+        android:layout_x="10dp"
+        android:layout_y="365dp"
+        android:text="@string/happy_lock_display"
+        android:textAlignment="center"
+        android:textColor="#7F7F7F"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="127dp"
+        android:layout_toStartOf="@+id/textView4"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:src="@drawable/home_wallpaper"
+        android:visibility="invisible" />
+
+</AbsoluteLayout>

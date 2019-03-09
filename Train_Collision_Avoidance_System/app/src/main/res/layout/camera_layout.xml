@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/cPreview">
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCam"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="128dp"
+        android:layout_height="28dp"
+        android:layout_x="12dp"
+        android:layout_y="242dp"
+        android:background="@drawable/default_button_shape"
+        android:fontFamily="sans-serif"
+        android:text="THERMAL ON/OFF"
+        android:textAllCaps="false"
+        android:textColor="#CFFFEE"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSwitch"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="127dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="0dp"
+        android:layout_x="13dp"
+        android:layout_y="271dp"
+        android:background="@drawable/default_button_shape"
+        android:text="SWITCH CAMERA"
+        android:textAllCaps="false"
+        android:textColor="#CFFFEE"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</AbsoluteLayout>

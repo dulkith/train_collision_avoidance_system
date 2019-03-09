@@ -1,0 +1,137 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lk.edu.nchs.traincollisionavoidancesystem.BulbsControlFragment">
+
+    <TextView
+        android:id="@+id/displayText"
+        android:layout_width="344dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/detailText"
+        android:layout_x="10dp"
+        android:layout_y="354dp"
+        android:text="@string/happy_lock_display"
+        android:textAlignment="center"
+        android:textColor="#7F7F7F"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="19dp" />
+
+    <Button
+        android:id="@+id/changeMode"
+        android:layout_width="300dp"
+        android:layout_height="71dp"
+        android:layout_below="@+id/displayText"
+        android:layout_centerHorizontal="true"
+        android:layout_x="32dp"
+        android:layout_y="394dp"
+        android:background="@drawable/default_button_shape"
+        android:text="@string/change_mode"
+        android:textAllCaps="false"
+        android:textColor="#CFFFEE"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButtonL2"
+        android:layout_alignBottom="@+id/toggleButtonL2"
+        android:layout_alignStart="@+id/lockButton"
+        android:layout_x="142dp"
+        android:layout_y="212dp"
+        android:text="@string/light_2"
+        android:textColor="#686A6A"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toggleButtonL2"
+        android:layout_marginBottom="12dp"
+        android:layout_toStartOf="@+id/toggleButtonL2"
+        android:layout_x="139dp"
+        android:layout_y="84dp"
+        android:text="@string/light_1"
+        android:textColor="#686A6A"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonL1"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_x="30dp"
+        android:layout_y="114dp"
+        android:background="@drawable/bulbs_button_shape"
+        android:textColor="#F7FDFD"
+        android:textOff="POWER OFF"
+        android:textOn="POWER ON"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="342dp"
+        android:layout_height="1dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="20dp"
+        android:layout_x="9dp"
+        android:layout_y="203dp"
+        android:background="#C6C6C6" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonL2"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="48dp"
+        android:layout_x="34dp"
+        android:layout_y="241dp"
+        android:background="@drawable/bulbs_button_shape"
+        android:textColor="#F7FDFD"
+        android:textOff="POWER OFF"
+        android:textOn="POWER ON"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="63dp"
+        android:layout_y="23dp"
+        android:text="HOME BULBS CONTROL"
+        android:textColor="#4C4C4C"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="45dp"
+        android:layout_y="64dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+</AbsoluteLayout>
